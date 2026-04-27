@@ -1,10 +1,17 @@
-def app():
-    return None
+from fastapi import FastAPI
 
+app = FastAPI()
 
-def root():
-    return None
+@app.get("/helloworld")
+async def root():
+    return {"message": "Hello World"}
 
+@app.get("/status")
+async def get_status():
+    return {"status": "online"}
 
 def funcaoteste():
-    return None
+    return {"resultado": "sucesso"}
+
+def soma(a, b):
+    return a + b
