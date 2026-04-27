@@ -24,6 +24,7 @@ jobs:
 
       - name: Executar os Testes Unitários
         run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
           pytest test/test.py
 
 
